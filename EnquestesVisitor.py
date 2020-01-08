@@ -68,13 +68,11 @@ class EnquestesVisitor(ParseTreeVisitor):
         n = ctx.getChildCount()
         l = [next(g) for i in range(n)]
         fixid = self.items[l[3].getText()]
-        print("Estamos en alternative")
-        print(fixid)
         for j in range(5,n-1):
             if l[j].getText() != ',':
-                addid = self.items[self.visit(l[j])]
-                print(addid)
-                self.AST.add_edge(fixid,addid,color='green')
+                pair = self.visit(l[j])
+                addid = self.items[pair[1]]
+                self.AST.add_edge(fixid,addid,id=pair[0],color='green')
 
 
     # Visit a parse tree produced by EnquestesParser#alter.
@@ -82,7 +80,7 @@ class EnquestesVisitor(ParseTreeVisitor):
         g = ctx.getChildren()
         n = ctx.getChildCount()
         l = [next(g) for i in range(n)]
-        return l[3].getText()
+        return (l[1].getText(),l[3].getText())
 
 
     # Visit a parse tree produced by EnquestesParser#enque.
