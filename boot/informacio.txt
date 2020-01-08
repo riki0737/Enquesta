@@ -1,0 +1,8 @@
+Necesitas ayuda?
+/start: inicializa una ocnversación con el bot
+/help: Muestra las diferentes funcionalidades del boot
+/author: Información sobre su creador
+/quiz <idEnquesta>: Realizar la encuesta seleccionada
+/bar <idPregunta>: Muestra una gráfica de barras de la pregunta seleccionada donde el eje X es la respuesta y el eje Y total de respuestas
+/pie <idPregunta>: Lo mismo que el anterior solo cambia la gráfica a quesos
+/report: Muestra el total de las repuestas por cada respuesta y su respectiva pregunta

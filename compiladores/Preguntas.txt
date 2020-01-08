@@ -1,0 +1,2 @@
+P1:PREGUNTA Como te llamas ?
+P2:PREGUNTA Cuantos años tienes ? 
